@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
+  
   <!-- ========== NAV ========== -->
   <nav class="nav">
     <button class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -51,11 +51,16 @@
   <section class="home" id="home">
     <div class="home-inner">
       <div class="home-label">Based in Nairobi, Kenya</div>
-      <h1 class="home-title">
-        We <span class="c-orange">Design.</span><br>
-        We <span class="c-orange">Print.</span><br>
-        We <span class="c-green">Brand.</span>
-      </h1>
+      
+      <!-- 3D ROTATING TEXT SECTION -->
+      <div class="rotating-text-wrapper">
+        <h1 class="rotating-text" id="rotatingText">
+          <span class="text-part">We Design</span>
+          <span class="text-part">We Brand</span>
+          <span class="text-part">We Print</span>
+        </h1>
+      </div>
+
       <p class="home-sub">Professional graphic design, printing, and branding for businesses across Kenya. From a single flyer to a complete brand identity — we deliver quality that speaks for itself.</p>
 
       <div class="home-stats">
@@ -332,6 +337,16 @@
     </div>
   </section>
 
+  <!-- ========== QUOTE ROTATION SECTION ========== -->
+  <section class="quote-section" id="quotes">
+    <div class="quote-container">
+      <div class="quote-text" id="quoteDisplay">
+        <p class="quote-content" id="quoteContent">Design is not just what it looks like and feels like. Design is how it works.</p>
+        <p class="quote-author" id="quoteAuthor">— Steve Jobs</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== SUGGESTION FORM ========== -->
   <section class="suggestion-section" id="suggestions">
     <div class="suggestion-container">
@@ -529,6 +544,57 @@
     document.addEventListener('click', function(e) {
       if (!document.querySelector('.nav').contains(e.target)) closeMenu();
     });
+
+    // ---- 3D ROTATING TEXT ----
+    const rotatingText = document.getElementById('rotatingText');
+    let rotationDegree = 0;
+
+    function rotateText3D() {
+      rotationDegree += 0.5;
+      rotatingText.style.transform = `rotateY(${rotationDegree}deg) rotateX(${rotationDegree * 0.3}deg)`;
+      requestAnimationFrame(rotateText3D);
+    }
+
+    // Start animation
+    rotateText3D();
+
+    // ---- QUOTE ROTATION ----
+    const quotes = [
+      { text: "Design is not just what it looks like and feels like. Design is how it works.", author: "— Steve Jobs" },
+      { text: "The best design is the one that makes you smile because it's so simple.", author: "— Oscar Wilde" },
+      { text: "Every piece of work tells a story. We make sure yours is told beautifully.", author: "— Vince Graphics" },
+      { text: "Good design is invisible. It doesn't get in the way of the message.", author: "— Anonymous" },
+      { text: "Trust in the Lord with all your heart, and He will make your paths straight.", author: "— Proverbs 3:5-6" },
+      { text: "Commit to the Lord whatever you do, and He will establish your plans.", author: "— Proverbs 16:3" },
+      { text: "The Lord is my light and my salvation. Whom shall I fear?", author: "— Psalm 27:1" },
+      { text: "I can do all things through Christ who strengthens me.", author: "— Philippians 4:13" }
+    ];
+
+    let quoteIndex = 0;
+
+    function displayQuote() {
+      const quoteDisplay = document.getElementById('quoteDisplay');
+      const quoteContent = document.getElementById('quoteContent');
+      const quoteAuthor = document.getElementById('quoteAuthor');
+
+      // Fade out
+      quoteDisplay.style.opacity = '0';
+
+      setTimeout(() => {
+        quoteContent.textContent = quotes[quoteIndex].text;
+        quoteAuthor.textContent = quotes[quoteIndex].author;
+        quoteIndex = (quoteIndex + 1) % quotes.length;
+
+        // Fade in
+        quoteDisplay.style.opacity = '1';
+      }, 500);
+    }
+
+    // Display first quote
+    displayQuote();
+
+    // Rotate quote every 6 seconds
+    setInterval(displayQuote, 6000);
 
     // ---- SUGGESTION FORM ----
     function submitSuggestion(event) {
