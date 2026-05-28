@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vince Graphics — Design. Print. Brand.</title>
+  <link rel="stylesheet" href="premium-style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-text">Vince Graphics</span>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <a href="#" onclick="goToPage(0); return false;" class="nav-link active">Home</a>
+        <a href="#" onclick="goToPage(1); return false;" class="nav-link">About</a>
+        <a href="#" onclick="goToPage(2); return false;" class="nav-link">Services</a>
+        <a href="#" onclick="goToPage(3); return false;" class="nav-link">Payment</a>
+        <a href="#" onclick="goToPage(4); return false;" class="nav-link">Feedback</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== PAGES CONTAINER ========== -->
+  <div class="pages-container" id="pagesContainer">
+
+    <!-- ========== PAGE 1: HOME ========== -->
+    <div class="page page-home" id="page0">
+      <div class="page-content">
+        <div class="home-header">
+          <h1 class="home-label">Based in Nairobi, Kenya</h1>
+        </div>
+
+        <!-- 3D ROTATING TEXT -->
+        <div class="rotating-3d-wrapper">
+          <div class="rotating-3d-box" id="rotating3DBox">
+            <div class="rotating-face face-1">We Design</div>
+            <div class="rotating-face face-2">We Brand</div>
+            <div class="rotating-face face-3">We Print</div>
+            <div class="rotating-face face-4">We Design</div>
+          </div>
+        </div>
+
+        <p class="home-subtitle">Professional graphic design, printing, and branding for businesses across Kenya. From a single flyer to a complete brand identity — we deliver quality that speaks for itself.</p>
+
+        <div class="home-stats">
+          <div class="stat-item">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Projects</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Clients</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">5★</div>
+            <div class="stat-label">Rating</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-number">6</div>
+            <div class="stat-label">Services</div>
+          </div>
+        </div>
+
+        <div class="home-buttons">
+          <button class="btn btn-primary" onclick="goToPage(2)">Explore Services</button>
+          <button class="btn btn-secondary" onclick="goToPage(3)">Get a Quote</button>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>Swipe or click to navigate →</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PAGE 2: ABOUT ========== -->
+    <div class="page page-about" id="page1">
+      <div class="page-content">
+        <div class="section-header">
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">Trusted by Businesses Across Kenya</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="card-number">01</div>
+            <h3>Precision in Every Detail</h3>
+            <p>We treat every project — big or small — with the same care, creativity, and attention to detail that builds lasting relationships.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-number">02</div>
+            <h3>Fast Turnaround Times</h3>
+            <p>Tight deadline? No problem. We work efficiently without ever compromising on quality or professional standards.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-number">03</div>
+            <h3>Transparent Pricing</h3>
+            <p>No hidden costs. We provide clear, competitive quotes before any work begins. Your budget matters to us.</p>
+          </div>
+          <div class="about-card">
+            <div class="card-number">04</div>
+            <h3>Unlimited Revisions</h3>
+            <p>We don't stop until you're 100% satisfied. Your vision is our mission, and we're committed to perfection.</p>
+          </div>
+        </div>
+
+        <div class="about-highlight">
+          <p><strong>We combine creativity with professionalism to deliver results that matter.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PAGE 3: SERVICES ========== -->
+    <div class="page page-services" id="page2">
+      <div class="page-content">
+        <div class="section-header">
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-subtitle">Everything your brand needs — designed, printed, and delivered with precision</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-number">01</div>
+            <h3>Flyer Design</h3>
+            <p>Eye-catching print and digital flyers designed to grab attention and drive action. Perfect for events, promotions, and campaigns.</p>
+            <div class="service-tags">
+              <span>Print-ready</span>
+              <span>Digital</span>
+              <span>A4/A5</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">02</div>
+            <h3>UI/UX Design</h3>
+            <p>Beautiful, user-friendly interfaces for websites and mobile apps built to convert visitors into customers.</p>
+            <div class="service-tags">
+              <span>Web Design</span>
+              <span>App UI</span>
+              <span>Wireframes</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">03</div>
+            <h3>Logo & Branding</h3>
+            <p>Complete brand identity packages — logo, color palettes, typography, and brand guidelines that make you memorable.</p>
+            <div class="service-tags">
+              <span>Logo Design</span>
+              <span>Brand Kit</span>
+              <span>Guidelines</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">04</div>
+            <h3>Publications</h3>
+            <p>Professionally designed magazines, brochures, catalogues, and annual reports from layout to print-ready files.</p>
+            <div class="service-tags">
+              <span>Magazines</span>
+              <span>Brochures</span>
+              <span>Catalogues</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">05</div>
+            <h3>Mass Printing</h3>
+            <p>High-quality bulk printing for flyers, banners, business cards, and branded merchandise. Fast turnaround, fair pricing.</p>
+            <div class="service-tags">
+              <span>Bulk Orders</span>
+              <span>Banners</span>
+              <span>Business Cards</span>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-number">06</div>
+            <h3>Social Media Graphics</h3>
+            <p>Scroll-stopping graphics for Instagram, Facebook, and LinkedIn. Consistent, on-brand visuals that grow your audience.</p>
+            <div class="service-tags">
+              <span>Instagram</span>
+              <span>Facebook</span>
+              <span>LinkedIn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PAGE 4: PAYMENT ========== -->
+    <div class="page page-payment" id="page3">
+      <div class="page-content">
+        <div class="section-header">
+          <h2 class="section-title">Pay via M-Pesa</h2>
+          <p class="section-subtitle">Quick, secure payment directly to Vince Graphics</p>
+        </div>
+
+        <div class="payment-card-container">
+          <div class="payment-card">
+            <div class="payment-info">
+              <div class="mpesa-badge">M-PESA</div>
+              <div class="info-row">
+                <span class="info-label">Business Name</span>
+                <span class="info-value">Henry Michuku</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Till Number</span>
+                <span class="info-value">4136540</span>
+              </div>
+              <div class="info-row">
+                <span class="info-label">Method</span>
+                <span class="info-value">Lipa na M-Pesa</span>
+              </div>
+            </div>
+
+            <form class="payment-form" onsubmit="sendPayment(event)">
+              <h3>Request Payment Prompt</h3>
+              <p>Enter your details and we'll send an M-Pesa prompt to your phone</p>
+
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" id="pay-name" placeholder="John Doe" required />
+              </div>
+
+              <div class="form-group">
+                <label>M-Pesa Phone</label>
+                <input type="tel" id="pay-phone" placeholder="0712 345 678" required />
+              </div>
+
+              <div class="form-group">
+                <label>Amount (KES)</label>
+                <input type="number" id="pay-amount" placeholder="5000" required />
+              </div>
+
+              <div class="form-group">
+                <label>Service</label>
+                <select id="pay-service" required>
+                  <option>Flyer Design</option>
+                  <option>UI/UX Design</option>
+                  <option>Logo & Branding</option>
+                  <option>Publications</option>
+                  <option>Mass Printing</option>
+                  <option>Social Media Graphics</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Send M-Pesa Prompt</button>
+              <div id="pay-msg" class="form-msg"></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="contact-info">
+          <p>Need help? Contact us:</p>
+          <a href="tel:+254796701659" class="contact-link">📞 +254 796 701 659</a>
+          <a href="mailto:gitauhenry467@gmail.com" class="contact-link">✉️ gitauhenry467@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========== PAGE 5: SUGGESTIONS ========== -->
+    <div class="page page-suggestions" id="page4">
+      <div class="page-content">
+        <div class="section-header">
+          <h2 class="section-title">Share Your Feedback</h2>
+          <p class="section-subtitle">Help us improve! Your suggestions matter to us</p>
+        </div>
+
+        <div class="suggestion-card-container">
+          <form class="suggestion-form" onsubmit="submitSuggestion(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name *</label>
+                <input type="text" id="sugg-name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" id="sugg-phone" placeholder="0712 345 678" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" id="sugg-email" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Country *</label>
+                <input type="text" id="sugg-country" placeholder="Kenya" required />
+              </div>
+              <div class="form-group">
+                <label>County *</label>
+                <select id="sugg-county" required>
+                  <option value="">Select County</option>
+                  <option>Nairobi</option>
+                  <option>Mombasa</option>
+                  <option>Kisumu</option>
+                  <option>Nakuru</option>
+                  <option>Eldoret</option>
+                  <option>Kericho</option>
+                  <option>Nyeri</option>
+                  <option>Muranga</option>
+                  <option>Kiambu</option>
+                  <option>Machakos</option>
+                  <option>Makueni</option>
+                  <option>Kajiado</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Your Suggestion / Recommendation *</label>
+              <textarea id="sugg-message" placeholder="Tell us what you think..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            <div id="sugg-msg" class="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    let currentPage = 0;
+    const totalPages = 5;
+    let isTransitioning = false;
+
+    // ---- NAVIGATION ----
+    function goToPage(pageNum) {
+      if (isTransitioning || pageNum === currentPage) return;
+      if (pageNum < 0 || pageNum >= totalPages) return;
+
+      isTransitioning = true;
+      const container = document.getElementById('pagesContainer');
+      const offset = pageNum * -100;
+      
+      container.style.transform = `translateX(${offset}%)`;
+      
+      // Update active nav link
+      document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+      document.querySelectorAll('.nav-link')[pageNum].classList.add('active');
+
+      closeMenu();
+      currentPage = pageNum;
+      
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 1000);
+    }
+
+    // ---- KEYBOARD NAVIGATION ----
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') goToPage(currentPage + 1);
+      if (e.key === 'ArrowLeft') goToPage(currentPage - 1);
+    });
+
+    // ---- HAMBURGER MENU ----
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      const hamburger = document.getElementById('hamburger');
+      menu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    function closeMenu() {
+      const menu = document.getElementById('navMenu');
+      const hamburger = document.getElementById('hamburger');
+      menu.classList.remove('active');
+      hamburger.classList.remove('active');
+    }
+
+    // ---- 3D ROTATING BOX ----
+    let rotation = 0;
+    function rotate3DBox() {
+      rotation += 1;
+      const box = document.getElementById('rotating3DBox');
+      box.style.transform = `rotateY(${rotation}deg)`;
+      requestAnimationFrame(rotate3DBox);
+    }
+    rotate3DBox();
+
+    // ---- PAYMENT FORM ----
+    function sendPayment(event) {
+      event.preventDefault();
+      const name = document.getElementById('pay-name').value.trim();
+      const phone = document.getElementById('pay-phone').value.trim();
+      const amount = document.getElementById('pay-amount').value.trim();
+      const service = document.getElementById('pay-service').value;
+      const msg = document.getElementById('pay-msg');
+
+      if (!name || !phone || !amount) {
+        msg.textContent = '⚠️ Please fill in all fields.';
+        msg.className = 'form-msg error';
+        return;
+      }
+
+      if (phone.replace(/\s/g, '').length < 9) {
+        msg.textContent = '⚠️ Enter a valid phone number.';
+        msg.className = 'form-msg error';
+        return;
+      }
+
+      msg.textContent = '⏳ Sending M-Pesa prompt to ' + phone + '...';
+      msg.className = 'form-msg';
+
+      setTimeout(() => {
+        msg.textContent = '✅ Prompt sent! Check your phone and enter your PIN.';
+        msg.className = 'form-msg success';
+        setTimeout(() => {
+          document.querySelector('.payment-form').reset();
+          msg.textContent = '';
+        }, 3000);
+      }, 2000);
+    }
+
+    // ---- SUGGESTION FORM ----
+    function submitSuggestion(event) {
+      event.preventDefault();
+      const name = document.getElementById('sugg-name').value.trim();
+      const email = document.getElementById('sugg-email').value.trim();
+      const msg = document.getElementById('sugg-msg');
+
+      if (!name || !email) {
+        msg.textContent = '⚠️ Please fill in all fields.';
+        msg.className = 'form-msg error';
+        return;
+      }
+
+      msg.textContent = '⏳ Sending your feedback...';
+      msg.className = 'form-msg';
+
+      setTimeout(() => {
+        msg.textContent = '✅ Thank you! Your feedback has been received.';
+        msg.className = 'form-msg success';
+        setTimeout(() => {
+          document.querySelector('.suggestion-form').reset();
+          msg.textContent = '';
+        }, 3000);
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
